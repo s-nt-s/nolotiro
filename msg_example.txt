@@ -1,0 +1,29 @@
+Hola %s,
+este es un mensaje automático para contestar a las 4 preguntas más frecuentes:
+
+# ¿Esta aún disponible?
+
+Si en el anuncio pone que esta disponible entonces lo esta.
+Yo siempre lo marco como 'entregado' si ya no lo tengo, así que no importa cuan viejo sea el anuncio, que si pone que esta disponible es porque así es.
+
+# ¿Dónde podemos quedar?
+
+Si la cosa pesa poco y cabe en una mochila normal podemos quedar en:
+
+- c/ ******* 24 (de 8:30am a 4pm)
+- ****** Renfe o Metro **** (de 8:00am a 8:30am) 
+- c/ ******* 5 (a partir de las 5pm)
+
+En caso contrarío, solo podemos quedar en:
+
+- c/ ******* 5 (a partir de las 5pm)
+
+Obviamente esto es orientativo y depende del día concreto.
+
+# ¿Podemos contactar por teléfono/whatsapp/telegram?
+
+No. Solo hablo por nolotiro o por xmpp (mi cuenta es ******@*****.***)
+
+# ¿Cómo quedamos?
+
+Simplemente proponme varias opciones, que se ajusten a lo dicho en la 2º respuesta, con más de 24 horas de antelación.
