@@ -1,6 +1,11 @@
 from core.api import NoLoTiro
 from core.util import cfg, read, read_tuples
-from os.path import isfile
+from os.path import isfile, abspath, dirname
+from os import chdir
+
+abspath = abspath(__file__)
+dname = dirname(abspath)
+chdir(dname)
 
 msg_template = read("msg.txt")
 user, password = cfg(".pw_nolotiro")
