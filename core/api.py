@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-import bs4
-import html2text
 import textwrap
+from functools import lru_cache
+from urllib.parse import urljoin
+
+import bs4
 import requests
 
-from urllib.parse import urljoin
-from functools import lru_cache
+import html2text
 
-from .util import default_headers, breakline, soup_to_abs
+from .util import breakline, default_headers, soup_to_abs
+
 
 class Bubble:
 
@@ -38,7 +40,7 @@ class Thread:
     @lru_cache(maxsize=1)
     def key(self):
         return (self.sender, self.subject)
-        
+
     @property
     @lru_cache(maxsize=1)
     def bubbles(self):
@@ -56,7 +58,7 @@ class Thread:
             if b.me:
                 return True
         return False
-        
+
     @property
     @lru_cache(maxsize=1)
     def final(self):
@@ -74,6 +76,7 @@ class Thread:
         self.api.submit(s.find("form"), {
             "body": text
         })
+
 
 class NoLoTiro:
 

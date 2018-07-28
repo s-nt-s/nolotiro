@@ -1,6 +1,7 @@
 import re
-from urllib.parse import urljoin
 import textwrap
+from urllib.parse import urljoin
+
 import requests
 
 
@@ -21,6 +22,7 @@ default_headers = {
 breakline = re.compile(r"[\n]{3,}")
 sp = re.compile(r"\s+")
 
+
 def rel_to_abs(node, attr, root):
     if attr in node.attrs:
         node.attrs[attr] = urljoin(root, node.attrs[attr])
@@ -34,10 +36,12 @@ def soup_to_abs(soup, root):
     for a in soup.findAll("from"):
         rel_to_abs(a, "action", root)
 
+
 def cfg(path):
     with open(path, 'r') as f:
         l = f.readline().strip()
         return sp.split(l)
+
 
 def read(path):
     with open(path, 'r') as f:
@@ -45,7 +49,9 @@ def read(path):
         text = textwrap.dedent(text).strip()
         return text
 
+
 def read_tuples(path):
     txt = read(path)
-    tps = [tuple(l.strip().split("\t")) for l in txt.split("\n") if len(l.strip())]
+    tps = [tuple(l.strip().split("\t"))
+           for l in txt.split("\n") if len(l.strip())]
     return tps

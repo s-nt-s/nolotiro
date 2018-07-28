@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+from os import chdir
+from os.path import abspath, dirname, isfile
+
 from core.api import NoLoTiro
 from core.util import cfg, read, read_tuples
-from os.path import isfile, abspath, dirname
-from os import chdir
 
 abspath = abspath(__file__)
 dname = dirname(abspath)
@@ -16,6 +17,7 @@ user, password = cfg(".pw_nolotiro")
 done_file = "done.txt"
 
 done = set(read_tuples(done_file)) if isfile(done_file) else set()
+
 
 def reply(t):
     t.reply(msg_template % (t.sender))
@@ -30,4 +32,4 @@ for t in n.threads():
 
 with open(done_file, "w") as f:
     for d in done:
-        f.write("\t".join(d)+"\n")
+        f.write("\t".join(d) + "\n")
