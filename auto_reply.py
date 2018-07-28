@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
+
 from core.api import NoLoTiro
 from core.util import cfg, read, read_tuples
 from os.path import isfile, abspath, dirname
