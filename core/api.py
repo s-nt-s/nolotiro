@@ -53,7 +53,6 @@ class Thread:
     @property
     @lru_cache(maxsize=1)
     def answered(self):
-        print ("ooooo")
         for b in self.bubbles:
             if b.me:
                 return True
