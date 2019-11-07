@@ -25,12 +25,17 @@ heavy = set(read(heavy_file).split("\n")) if isfile(heavy_file) else set()
 
 
 def reply(t):
-    mark = "//" if t and t.subject in heavy else "%%"
-    msg = re.sub(r"^---.*$", "", msg_template, flags=re.MULTILINE)
-    msg = re.sub(r"^"+mark+r" .*$", "", msg, flags=re.MULTILINE)
-    msg = re.sub(r"^(%%|//) ", "", msg, flags=re.MULTILINE)
+    if isfile("msg/"+t.subject+".txt"):
+        msg = read("msg/"+t.subject+".txt")
+    else:
+        mark = "//" if t and t.subject in heavy else "%%"
+        msg = re.sub(r"^---.*$", "", msg_template, flags=re.MULTILINE)
+        msg = re.sub(r"^"+mark+r" .*$", "", msg, flags=re.MULTILINE)
+        msg = re.sub(r"^(%%|//) ", "", msg, flags=re.MULTILINE)
     msg = breakline.sub(r"\n\n", msg)
-    t.reply(msg % (t.sender))
+    if "%s" in msg:
+        msg = msg % t.sender
+    t.reply(msg)
 
 n = NoLoTiro(user, password)
 

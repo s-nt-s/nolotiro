@@ -3,5 +3,6 @@
 done.txt
 msg.txt
 msg_orig.txt
+msg/*
 heavy.txt
 __pycache__
