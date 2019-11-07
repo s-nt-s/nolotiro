@@ -1,5 +1,5 @@
 Hola %s,
-este es un mensaje automático para contestar a las 4 preguntas más frecuentes:
+este es un mensaje automático para contestar a las 6 preguntas más frecuentes:
 
 # ¿Esta aún disponible?
 
@@ -27,3 +27,14 @@ No. Solo hablo por nolotiro o por xmpp (mi cuenta es ******@*****.***)
 # ¿Cómo quedamos?
 
 Simplemente proponme varias opciones, que se ajusten a lo dicho en la 2º respuesta, con más de 24 horas de antelación.
+Y dame una descripción de ti para que te pueda reconocer.
+
+# ¿Voy a contestar?
+
+Lamentablemente, como mucha gente da plantón ya no marco como 'reservado' un anuncio cuando he quedado con alguien, ya que eso me hace perder más tiempo aún.
+Es decir, que aunque el artículo seguro que esta disponible - si así lo pone en el anuncio - quizá ya haya quedado con alguien y si esa persona finalmente se presenta verás como paso el anuncio a 'entregado' sin contestarte (lo siento, pero tengo demasiados mensajes), en caso contrario pasaré a contactar con la siguiente persona que haya propuesto, con suficiente concreción, una hora y lugar para quedar.
+
+# Otras preguntas
+
+Por favor, asegurate de haber leído antes el contenido completo del anuncio y de este mensaje.
+La inmensa mayoría de las veces la respuesta ya esta ahí.
