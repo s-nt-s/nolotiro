@@ -29,10 +29,14 @@ class Thread:
     def __init__(self, api, tr):
         self.api = api
         self.unread = "unread" in tr.attrs.get("class", "")
-        a = tr.select("td.mail-subject a")[0]
+        a = tr.select_one("td.mail-subject a")
         self.url = a.attrs["href"]
         self.id = int(self.url.split("/")[-1])
-        self.sender = tr.select("td.sender a")[0].get_text().strip()
+        snd_td = tr.select_one("td.sender")
+        if "[borrado]" in snd_td.get_text():
+            self.sender = "[borrado]"
+        else:
+            self.sender = snd_td.select_one("a").get_text().strip()
         self.subject = a.get_text().strip()
         self.time = tr.find("time").attrs["datetime"]
 

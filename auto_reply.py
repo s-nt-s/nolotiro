@@ -27,6 +27,8 @@ heavy = set(read(heavy_file).split("\n")) if isfile(heavy_file) else set()
 def reply(t):
     if isfile("msg/"+t.subject+".txt"):
         msg = read("msg/"+t.subject+".txt")
+        if len(msg)==0:
+            return
     else:
         mark = "//" if t and t.subject in heavy else "%%"
         msg = re.sub(r"^---.*$", "", msg_template, flags=re.MULTILINE)
